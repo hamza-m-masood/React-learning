@@ -1,0 +1,16 @@
+{
+  "name": "indecision-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Hamza Masood",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "6.24.1"
+  },
+  "scripts": {
+    "babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
+    "babel-playground": "babel src/playground/jsx-indecision.js --out-file=public/scripts/app.js --presets=env,react --watch"
+  }
+}
