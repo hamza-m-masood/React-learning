@@ -8,9 +8,12 @@ localStorage.setItem('name', 'Hamza Masood')
 localStorage.getItem('name')
 // remove item
 localStorage.removeItem('name')
+//clearing storage
+localStorage.clear()
 ```
 
 Local storage can only store strings. If you would like to store objects in local storage then you must use json.
+Notice the upper and lower case json
 ```javascript
 //takes an object and gives its string representation and stores it in a var
 cosnt json = JSON.stringify({age: 26})
