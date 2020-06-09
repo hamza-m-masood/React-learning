@@ -19,8 +19,8 @@ class Counter extends React.Component {
         try {
             const json = localStorage.getItem('count')
             const countString = JSON.parse(json)
-            const count=parseInt(countString, 10)
-            if (count) {
+            const count = parseInt(countString, 10)
+            if (!isNaN(count)) {
                 this.setState(() => ({ count }))
             }
         } catch (e) {
