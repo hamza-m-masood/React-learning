@@ -15,3 +15,21 @@ The subtract import can be changed to whatever name you would like
 
 ## Loader
 A lodaer lets you customise the behaviour of webpack when it loads a file. We use babel to load a file
+
+## source-map
+Lets you see the specific component file in chrome dev tools if there is an error. 
+```javascript
+devtool: 'cheap-module-eval-source-map'
+```
+
+## dev-server
+
+
+```javascript
+//package.json
+"dev-server": "webpack-dev-server"
+//webpack config
+devServer: {
+    contentBase: path.join(__dirname, 'public')
+}
+```
