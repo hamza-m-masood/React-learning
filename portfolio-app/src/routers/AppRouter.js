@@ -1,7 +1,7 @@
-import ExpenseDashboardPage from '../components/ExpenseDashboardPage'
-import AddExpensePage from '../components/AddExpensePage'
-import EditExpensePage from '../components/EditExpensePage'
-import HelpPage from '../components/HelpPage'
+import Welcome from '../components/Welcome'
+import Contact from '../components/Contact'
+import Portfolio from '../components/Portfolio'
+import PortfolioSpecific from '../components/PortfolioSpecific'
 import NotFoundPage from '../components/NotFoundPage'
 import Header from '../components/Header'
 import React from 'react'
@@ -12,10 +12,10 @@ const AppRouter = () => (
         <div>
             <Header />
             <Switch>
-                <Route path="/" component={ExpenseDashboardPage} exact={true} />
-                <Route path="/create" component={AddExpensePage} />
-                <Route path="/edit/:id" component={EditExpensePage} />
-                <Route path="/help" component={HelpPage} />
+                <Route path="/" component={Welcome} exact={true} />
+                <Route path="/Portfolio" component={Portfolio} exact={true} />
+                <Route path="/Portfolio/:id" component={PortfolioSpecific} />
+                <Route path="/contact" component={Contact} />
                 <Route component={NotFoundPage} />
             </Switch>
         </div>
