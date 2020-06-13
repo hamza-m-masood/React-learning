@@ -30,8 +30,12 @@ const setCount = ({ count = 100 } = {}) => ({
 })
 
 
-//REDUCER FUNCTION
-const store = createStore((state = { count: 0 }, action) => {
+//characteristics of reducers
+//1. Reducers are pure functions - meaning that they dont access anything outside of its scope
+//2. Never change state or action
+
+//REDUCERS
+const countReducer = (state = { count: 0 }, action) => {
     switch (action.type) {
         case 'INCREMENT':
             //const incrementBy = typeof action.incrementBy === 'number' ? action.incrementBy : 1
@@ -54,7 +58,9 @@ const store = createStore((state = { count: 0 }, action) => {
         default:
             return state
     }
-});
+}
+
+const store = createStore(countReducer);
 
 const unsubscribe = store.subscribe(() => {
     console.log(store.getState())
